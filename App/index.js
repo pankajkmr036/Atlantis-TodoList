@@ -1,9 +1,9 @@
 import React from 'react';
 
-import LandingScreen from './screens/LandingScreen';
+import RootNavigator from './navigation/RootNavigator';
 
 const App = () => {
-  return <LandingScreen />;
+  return <RootNavigator initialRouteName="LandingScreen" />;
 };
 
 export default App;
