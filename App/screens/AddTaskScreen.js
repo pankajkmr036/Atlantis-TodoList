@@ -1,26 +1,16 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
 
+import AddTodo from '../components/AddTodo';
 const AddTaskScreen = () => {
   return (
     <SafeAreaView>
       <StatusBar />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Text>Add Task Screen</Text>
-        </View>
+        <AddTodo />
       </ScrollView>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default AddTaskScreen;
