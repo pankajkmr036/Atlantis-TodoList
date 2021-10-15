@@ -4,12 +4,16 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import {persistStore, persistReducer} from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import {todoListReducer} from '../redux/reducers/todoReducers';
+
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
 };
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  todoList: todoListReducer,
+});
 
 const initialState = {};
 
