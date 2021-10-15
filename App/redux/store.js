@@ -5,6 +5,7 @@ import {persistStore, persistReducer} from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import {todoListReducer} from '../redux/reducers/todoReducers';
+import {userInfoReducer} from '../redux/reducers/userReducers';
 
 const persistConfig = {
   key: 'root',
@@ -13,6 +14,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   todoList: todoListReducer,
+  userInfoData: userInfoReducer,
 });
 
 const initialState = {};

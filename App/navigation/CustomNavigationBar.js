@@ -1,8 +1,12 @@
 import React, {useState} from 'react';
 import {Appbar, Menu} from 'react-native-paper';
+import {useSelector} from 'react-redux';
 
 function CustomNavigationBar({navigation, back}) {
   const [visible, setVisible] = useState(false);
+
+  const {userInfo} = useSelector(state => state.userInfoData);
+
   const openMenu = () => setVisible(true);
   const closeMenu = () => setVisible(false);
 
@@ -11,7 +15,7 @@ function CustomNavigationBar({navigation, back}) {
       {back ? <Appbar.BackAction onPress={navigation.goBack} /> : null}
       <Appbar.Content title="TODO List App" />
 
-      {!back ? (
+      {!back || userInfo?.idToken ? (
         <Menu
           visible={visible}
           onDismiss={closeMenu}

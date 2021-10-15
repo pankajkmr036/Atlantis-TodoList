@@ -1,26 +1,23 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {SafeAreaView, ScrollView, StatusBar, View} from 'react-native';
 
+import {Title} from 'react-native-paper';
+
+import GoogleSignIn from '../components/GoogleSignIn';
 const LandingScreen = () => {
   return (
     <SafeAreaView>
       <StatusBar />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Text>Project setup</Text>
+        <View style={{alignItems: 'center', marginTop: 250}}>
+          <Title style={{marginVertical: 50}}>
+            Welcome to the TODO List App
+          </Title>
+          <GoogleSignIn />
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default LandingScreen;

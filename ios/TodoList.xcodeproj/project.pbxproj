@@ -114,7 +114,6 @@
 				DC9A50A05B9BE92BCBB1AB1B /* Pods-TodoList-TodoListTests.debug.xcconfig */,
 				84307032E6006B9470940C47 /* Pods-TodoList-TodoListTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

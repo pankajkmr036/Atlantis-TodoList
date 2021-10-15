@@ -10,7 +10,7 @@ const App = () => {
     <StoreProvider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <PaperProvider>
-          <RootNavigator initialRouteName="LandingScreen" />
+          <RootNavigator />
         </PaperProvider>
       </PersistGate>
     </StoreProvider>
