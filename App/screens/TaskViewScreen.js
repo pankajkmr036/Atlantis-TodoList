@@ -4,18 +4,20 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
-  View,
+  Button,
 } from 'react-native';
 
-const TaskViewScreen = () => {
+import TodoList from '../components/TodoList';
+const TaskViewScreen = ({navigation}) => {
   return (
     <SafeAreaView>
       <StatusBar />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Text>Task View Screen</Text>
-        </View>
+        <TodoList />
+        <Button
+          title="Add New Task"
+          onPress={() => navigation.navigate('AddTaskScreen')}
+        />
       </ScrollView>
     </SafeAreaView>
   );
