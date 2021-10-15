@@ -1,9 +1,14 @@
 import React from 'react';
 
 import RootNavigator from './navigation/RootNavigator';
+import {Provider as PaperProvider} from 'react-native-paper';
 
 const App = () => {
-  return <RootNavigator initialRouteName="LandingScreen" />;
+  return (
+    <PaperProvider>
+      <RootNavigator initialRouteName="LandingScreen" />
+    </PaperProvider>
+  );
 };
 
 export default App;
